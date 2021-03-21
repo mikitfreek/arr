@@ -1,4 +1,4 @@
-const TOKEN = require('./config');
+const TOKEN = require('./settings');
 
 // Extract the required classes from the discord.js module
 const { Client, MessageAttachment } = require('discord.js');

@@ -2,22 +2,25 @@
   "name": "arr",
   "version": "1.0.0",
   "description": "",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mikitfreek/arr.git"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mikitfreek/arr/issues"
+  "engines": {
+    "node": ">=14.0 <=14.16"
   },
-  "homepage": "https://github.com/mikitfreek/arr#readme",
   "dependencies": {
-    "discord.js": "^12.5.1"
+    "axios": "^0.21.1",
+    "cheerio": "*",
+    "jquery": "^3.6.0",
+    "jsdom": "^17.0.0",
+    "puppeteer": "^10.2.0",
+    "push.js": "^1.0.12",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "socket.io": "^4.1.3"
   }
 }

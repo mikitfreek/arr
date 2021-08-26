@@ -22,6 +22,12 @@ client.on('message', message => {
     // Send the attachment in the message channel with a content
     message.channel.send(`${message.author},`, attachment);
   }
+  if (message.content === '!p') {
+    // Create the attachment using MessageAttachment
+    const attachment = new MessageAttachment('https://i.imgur.com/w3duR07.png');
+    // Send the attachment in the message channel with a content
+    message.channel.send(`${message.author},`, attachment);
+  }
 });
 
 // Log our bot in using the token from https://discord.com/developers/applications

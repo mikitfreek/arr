@@ -11,12 +11,11 @@
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": ">=14.0 <=14.16"
+    "node": "14.x"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "cheerio": "*",
-    "jquery": "^3.6.0",
     "jsdom": "^17.0.0",
     "puppeteer": "^10.2.0",
     "push.js": "^1.0.12",

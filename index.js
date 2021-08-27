@@ -27,7 +27,7 @@ let array = [];
 async function Run() {
 	try {
 		const response = await axios.get(
-			'https://www.ceneo.pl/Komputery;szukaj-3060+ti;0112-0.htm' //'https://www.reddit.com/r/programming.json'
+			'https://www.ceneo.pl/Komputery;szukaj-3070;0112-0.htm' //'https://www.reddit.com/r/programming.json'
 		)
 		//console.log(response.data)
 
@@ -46,9 +46,13 @@ async function Run() {
     //  }
     }
     
+    // ul = dom.window.document.createElement("ul");
     array.forEach(function(entry) {
       console.log(entry);
+      // li = dom.window.document.createElement("ul");
+      // ul.appendChild(li)
     });
+    // dom.window.document.body.appendChild(ul)
 
     //const title = response.data.querySelector('.cat-prod-row__name span').html//.$('.cat-prod-row__name span').text()
     //console.log('title', title);
@@ -60,17 +64,17 @@ Run()
 
 const io = require('socket.io')(server);
 
-const now = new Date();
-let millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 1, 0, 0) - now;
-if (millisTill10 < 0) {
-     millisTill10 += 86400000/4;
-}
-setInterval(function() { 
-  console.log("It's time!")
-  io.on('connection', function (socket) {
-    socket.emit('pushNotification', { success: true, msg: array });
-  });
-}, millisTill10);
+// const now = new Date();
+// let millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 1, 0, 0) - now;
+// if (millisTill10 < 0) {
+//      millisTill10 += 86400000/340;
+// }
+// setInterval(function() { 
+//   console.log("It's time!")
+//   io.on('connection', function (socket) {
+//     socket.emit('pushNotification', { success: true, msg: array });
+//   });
+// }, millisTill10);
 
 io.on('connection', function (socket) {
   socket.emit('pushNotification', { success: true, msg: array });

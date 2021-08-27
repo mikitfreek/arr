@@ -63,7 +63,7 @@ const io = require('socket.io')(server);
 const now = new Date();
 let millisTill10 = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 10, 1, 0, 0) - now;
 if (millisTill10 < 0) {
-     millisTill10 += 86400000/310;
+     millisTill10 += 86400000/4;
 }
 setInterval(function() { 
   console.log("It's time!")
@@ -72,3 +72,6 @@ setInterval(function() {
   });
 }, millisTill10);
 
+io.on('connection', function (socket) {
+  socket.emit('pushNotification', { success: true, msg: array[0][1] + ' works.' });
+});

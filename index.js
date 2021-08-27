@@ -1,5 +1,5 @@
 const http = require('http');
-const port = 8080;
+const port = 3000;
 
 const fs = require('fs');
 
@@ -73,5 +73,5 @@ setInterval(function() {
 }, millisTill10);
 
 io.on('connection', function (socket) {
-  socket.emit('pushNotification', { success: true, msg: array[0][1] + ' works.' });
+  socket.emit('pushNotification', { success: true, msg: array });
 });

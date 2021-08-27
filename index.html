@@ -12,8 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/push.js/1.0.12/push.min.js" integrity="sha512-DjIQO7OxE8rKQrBLpVCk60Zu0mcFfNx2nVduB96yk5HS/poYZAkYu5fxpwXj3iet91Ezqq2TNN6cJh9Y5NtfWg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.socket.io/3.1.3/socket.io.min.js" integrity="sha384-cPwlPLvBTa3sKAgddT6krw0cJat7egBga3DJepJyrLl4Q9/5WLra3rrnMcyTyOnh" crossorigin="anonymous"></script>
     <script>
-    const socket = io.connect('http://localhost:3000');
-    //const socket = io.connect('https://nodeapp2401.azurewebsites.net/:3000');
+    //const socket = io.connect('http://localhost:3000');
+    const socket = io.connect('https://nodeapp2401.herokuapp.com/');
     socket.on('pushNotification', function (data) {
         console.log(data);
         Push.create("RTX Bot", {
